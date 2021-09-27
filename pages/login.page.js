@@ -8,6 +8,17 @@ class LoginPage {
     get rememberLoginLabel () {return $('#form-login > div.form-check > label');}
     get submitButton () {return $('#form-login > button');}
     get overlay() { return $('#overlay');}
+
+    /**
+     * 
+     * @param {*} email 
+     * @param {*} password 
+     */
+    login(email, password) {
+        this.emailField.setValue(email);
+        this.passwordField.setValue(password);
+        this.submitButton.click();
+    }
     }
 
 
